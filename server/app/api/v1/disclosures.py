@@ -72,7 +72,13 @@ async def put_disclosures(product_id: str, body: DisclosuresPut,
         )
     ).scalars().all()
     by_key = {f.field_key: f for f in fields}
-    missing = [f.field_key for f in fields if f.required and not body.values.get(f.field_key)]
+    # batch_number / mfg_date / expiry_date map to first-class Batch columns
+    # (Fix Plan 1.4) — never require callers to submit them as disclosure values.
+    BATCH_MAPPED = {"batch_number", "mfg_date", "expiry_date"}
+    missing = [
+        f.field_key for f in fields
+        if f.required and f.field_key not in BATCH_MAPPED and not body.values.get(f.field_key)
+    ]
     if missing:
         raise err(400, "DISCLOSURE_MISSING", f"Missing required fields: {', '.join(missing)}")
     for key, value in body.values.items():

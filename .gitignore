@@ -25,3 +25,7 @@ build/
 # Docker volumes
 pgdata/
 redisdata/
+
+# Demo screenshots (generated locally, not committed)
+demo/shots/*
+!demo/shots/.gitkeep

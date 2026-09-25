@@ -14,6 +14,7 @@ Built from scratch from the spec docs in [`docs/`](docs/) (Option B).
 | `web/` | React 18 + TS + Vite dashboard (manufacturer → social_seller + platform_admin) |
 | `mobile/` | Flutter field app (scan, offline-first event queue) |
 | `docs/` | The 4 normative spec PDFs this repo is built against |
+| `demo/` | Live demo script + web↔server contract checker + Playwright screenshot suite + verification report |
 | `docker-compose.yml` | `db` + `redis` + `api` + `worker` |
 
 Spec → code map:
