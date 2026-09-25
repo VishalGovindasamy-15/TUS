@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+# Env & secrets
+.env
+.env.*
+!.env.example
+# Local data
+storage/
+*.db
+*.sqlite*
+# Node / web
+node_modules/
+dist/
+build/
+# Flutter / mobile
+.dart_tool/
+build/
+.idea/
+# Docker volumes
+pgdata/
+redisdata/
