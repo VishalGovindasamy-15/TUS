@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-100 text-slate-900 antialiased;
+}
+
+.leaflet-container {
+  @apply rounded-xl;
+  min-height: 420px;
+}
+
+.cluster-badge {
+  @apply flex items-center justify-center rounded-full bg-brand-600 text-white font-bold shadow;
+  width: 34px;
+  height: 34px;
+}
+
+.pin-badge {
+  @apply rounded-full border-2 border-white shadow;
+  width: 16px;
+  height: 16px;
+}

@@ -34,7 +34,7 @@ docker compose exec api python -m app.seed   # demo orgs, product, batch, disclo
 
 - API: http://localhost:8000 — OpenAPI docs at `/docs` (dev/staging only, disabled in prod)
 - Health: `GET /health` and `GET /api/v1/health`
-- Web dashboard: http://localhost:5173 (see `web/README.md`)
+- Web dashboard: http://localhost:3000 (compose) or http://localhost:5173 (`npm run dev` in `web/`, proxied to the API — see `web/README.md`)
 - Demo logins: phones printed by the seed script; with `SMS_PROVIDER=dummy` the OTP is
   returned as `debug_otp` in the `/auth/otp/request` response (non-prod only).
 
